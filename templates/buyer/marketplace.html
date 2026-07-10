@@ -54,9 +54,7 @@ placeholder="Search...">
 
 <div class="card shadow">
 
-<img src="https://picsum.photos/400/250?1"
-class="card-img-top">
-
+<img src="{{ url_for('static', filename='images/tomatoes.jpg') }}" class="card-img-top">
 <div class="card-body">
 
 <h4>🍅 Tomatoes</h4>
@@ -95,7 +93,7 @@ Lilian Farms
 
 <div class="card shadow">
 
-<img src="https://picsum.photos/400/250?2"
+<img src="{{ url_for('static', filename='images/corn.jpg') }}" class="card-img-top"
 class="card-img-top">
 
 <div class="card-body">
@@ -136,8 +134,7 @@ Green Valley Farm
 
 <div class="card shadow">
 
-<img src="https://picsum.photos/400/250?3"
-class="card-img-top">
+<img src="{{ url_for('static', filename='images/pepper.jpg') }}" class="card-img-top">
 
 <div class="card-body">
 

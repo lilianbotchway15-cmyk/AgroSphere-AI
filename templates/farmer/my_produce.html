@@ -36,7 +36,7 @@ Manage all your farm products.
 
 <i class="bi bi-plus-circle"></i>
 
-<a href="/farmer/add-produce"
+<a href="/farmer/add_produce"
 class="btn btn-success">
 
 <i class="bi bi-plus-circle"></i>
@@ -86,7 +86,7 @@ placeholder="Search produce...">
 
 <div class="card shadow-sm border-0">
 
-<img src="https://picsum.photos/400/250?random=1" class="card-img-top">
+<img src="{{ url_for('static', filename='images/tomatoes.jpg') }}" class="card-img-top">
 
 <div class="card-body">
 
@@ -106,9 +106,8 @@ Available
 
 <button class="btn btn-outline-success">
 
-<a href="/farmer/edit-produce"
-class="btn btn-outline-success">
-Edit
+<a href="{{ url_for('edit_produce') }}" class="btn btn-warning btn-sm">
+    Edit
 </a>
 
 </button>
@@ -138,7 +137,7 @@ Delete
 
 <div class="card shadow-sm border-0">
 
-<img src="https://picsum.photos/400/250?random=2" class="card-img-top">
+<img src="{{ url_for('static', filename='images/corn.jpg') }}" class="card-img-top">
 
 <div class="card-body">
 
@@ -160,9 +159,8 @@ Sold Out
 
 <button class="btn btn-outline-success">
 
-<a href="/farmer/edit-produce"
-class="btn btn-outline-success">
-Edit
+<a href="{{ url_for('edit_produce') }}" class="btn btn-warning btn-sm">
+    Edit
 </a>
 
 </button>
@@ -192,7 +190,7 @@ Delete
 
 <div class="card shadow-sm border-0">
 
-<img src="https://picsum.photos/400/250?random=3" class="card-img-top">
+<img src="{{ url_for('static', filename='images/pepper.jpg') }}" class="card-img-top">
 
 <div class="card-body">
 
@@ -214,9 +212,8 @@ Available
 
 <button class="btn btn-outline-success">
 
-<a href="/farmer/edit-produce"
-class="btn btn-outline-success">
-Edit
+<a href="{{ url_for('edit_produce') }}" class="btn btn-warning btn-sm">
+    Edit
 </a>
 
 </button>
