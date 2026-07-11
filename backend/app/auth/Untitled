@@ -1,0 +1,15 @@
+from app.extensions import supabase
+
+
+def signup_user(email: str, password: str) -> dict:
+    """Creates a new user via Supabase Auth. Raises AuthApiError on failure."""
+    response = supabase.auth.sign_up({
+        "email": email,
+        "password": password,
+    })
+
+    return {
+        "user_id": response.user.id if response.user else None,
+        "email": response.user.email if response.user else None,
+        "session": response.session,
+    }
