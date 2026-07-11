@@ -1,7 +1,11 @@
 
 from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_folder="public/static",
+    static_url_path="/static"
+)
 
 @app.route("/")
 def home():
@@ -37,14 +41,15 @@ def farmer_ai_assistant():
 def farmer_analytics():
     return render_template("farmer/analytics.html")
 
-@app.route("/farmer/add-produce")
+@app.route("/farmer/add_produce")
 def add_produce():
-    return render_template("farmer/add-produce.html")
+    return render_template("farmer/add_produce.html")
 
 
 @app.route("/farmer/edit_produce")
 def edit_produce():
     return render_template("farmer/edit_produce.html")
+
 
 @app.route("/farmer/messages")
 def farmer_messages():
